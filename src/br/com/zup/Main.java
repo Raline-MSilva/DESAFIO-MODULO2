@@ -34,6 +34,13 @@ public class Main {
                     System.out.println("Por fim, digite o CPF: ");
                     String cpf = leitor.nextLine();
 
+                    // não permite inserir um funcionário com o CPF repetido.
+                    if (funcionarios.containsKey(cpf)) {
+                        System.out.println("CPF já se encontra em nosso sistema!");
+                        System.out.println("Favor digitar um outro CPF: ");
+                        cpf = leitor.nextLine();
+                    }
+
                     funcionarios.put(cpf, " Nome: " + nome + " Telefone: " + telefone + " Email: " + email);
                     break;
                 }
