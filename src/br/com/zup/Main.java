@@ -18,7 +18,8 @@ public class Main {
         while (chave == 0) {
             System.out.println("Digite 1: Para Cadastrar um novo Funcionário");
             System.out.println("Digite 2: Para Exibir a lista de Funcionários cadastrados");
-            System.out.println("Digite 3: Para Sair do Programa de Cadastramento");
+            System.out.println("Digite 3: Para Remover um Funcionário da lista usando o CPF");
+            System.out.println("Digite 4: Para Sair do Programa de Cadastro");
             opcao = leitor.nextInt();
             leitor.nextLine();
 
@@ -43,12 +44,26 @@ public class Main {
                     break;
                 }
                 case 3: {
-                    chave = 3;
+                    System.out.println("Por favor, digite o CPF a ser deletado: ");
+                    String cpfDeletado = "";
+                    String cpfASerDeletado = leitor.nextLine();
+
+                    for (String lista : funcionarios.keySet()) {
+                        if (lista.contains(cpfDeletado)) {
+                            System.out.println("CPF deletado com Sucesso. ");
+                            cpfDeletado = cpfASerDeletado;
+                        }
+                    }
+                    break;
+
+                }
+                case 4: {
+                    chave = 4;
                     break;
                 }
 
                 default: {
-                    System.out.println("É preciso digitar um valor válido!");
+                    System.out.println("Por favor digite um valor que esteja dentro do Menu!");
                     break;
                 }
             }
