@@ -37,13 +37,16 @@ public class Main {
                     break;
                 }
                 case 2: {
-                    System.out.println(funcionarios);
+                    for (String lista : funcionarios.keySet()) {
+                        System.out.println("Contato: " + funcionarios.get(lista) + "." + " CPF: " + lista + ".");
+                    }
                     break;
                 }
                 case 3: {
                     chave = 3;
                     break;
                 }
+
                 default: {
                     System.out.println("É preciso digitar um valor válido!");
                     break;
@@ -52,3 +55,4 @@ public class Main {
         }
     }
 }
+
