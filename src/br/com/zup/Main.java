@@ -61,6 +61,7 @@ public class Main {
                             cpfDeletado = cpfASerDeletado;
                         }
                     }
+                    funcionarios.remove(cpfDeletado);
                     break;
 
                 }
