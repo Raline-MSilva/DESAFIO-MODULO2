@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         Map<String, String> funcionarios = new HashMap<String, String>();
+        System.out.println("∞∞∞ Bem vindo ao Cadastro de Funcionários! ∞∞∞");
         int chave = 0;
-        System.out.println("Bem vindo ao Cadastro de Funcionários!");
         int opcao = 0;
 
         //permite adicionar mais de um funcionário e apresenta um menu para decidir se deverá:
@@ -50,15 +50,14 @@ public class Main {
                     }
                     break;
                 }
+                //Excluindo funcionário pelo CPF
                 case 3: {
                     System.out.println("Por favor, digite o CPF a ser deletado: ");
-                    String cpfDeletado = "";
-                    String cpfASerDeletado = leitor.nextLine();
+                    String cpfDeletado = leitor.nextLine();
 
                     for (String lista : funcionarios.keySet()) {
                         if (lista.contains(cpfDeletado)) {
-                            System.out.println("CPF deletado com Sucesso. ");
-                            cpfDeletado = cpfASerDeletado;
+                            System.out.println("CPF deletado com Sucesso! ");
                         }
                     }
                     funcionarios.remove(cpfDeletado);
